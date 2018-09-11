@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.astuetz.PagerSlidingTabStrip;
 import com.example.sivous.shixue.R;
 import com.example.sivous.shixue.service.ImageService;
 import com.example.sivous.shixue.service.ServiceFactory;

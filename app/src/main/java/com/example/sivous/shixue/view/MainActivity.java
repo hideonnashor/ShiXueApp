@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import com.astuetz.PagerSlidingTabStrip;
 import com.example.sivous.shixue.R;
 import com.example.sivous.shixue.view.adapter.AdapterFactory;
 import com.example.sivous.shixue.view.fragment.HomeFrag;
@@ -35,6 +36,10 @@ public class MainActivity extends AppCompatActivity implements HomeFrag.OnFragme
         ViewPager pager = (ViewPager) findViewById(R.id.viewpager);
         try {
             pager.setAdapter(AdapterFactory.getFactory().getMainAcAdapter(getSupportFragmentManager(),fragmentList));
+            //tab
+            // Bind the tabs to the ViewPager
+            PagerSlidingTabStrip tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
+            tabs.setViewPager(pager);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {

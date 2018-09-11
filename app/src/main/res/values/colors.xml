@@ -4,4 +4,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorLearnMore">#32373A</color>
+    <color name="viewpageTab">#3F484E</color>
+    <color name="viewpageTabBack">#142732</color>
 </resources>

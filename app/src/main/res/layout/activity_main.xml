@@ -12,8 +12,19 @@
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="5"
     />
-
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                  android:layout_weight="0.05">
+        <com.astuetz.PagerSlidingTabStrip
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:pstsIndicatorColor="@color/viewpageTab"
+                app:pstsUnderlineColor="@color/viewpageTabBack"
+                app:pstsShouldExpand="true"
+                android:padding="0dp"
+    />
+    </LinearLayout>
 
 </LinearLayout>

@@ -1,14 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".view.fragment.HomeFrag">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:context=".view.fragment.HomeFrag"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:orientation="vertical">
+        <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+        />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                        android:layout_weight="0.2">
+                <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+                          android:text="@string/learnmore"
+                          android:gravity="right"
+                          android:layout_gravity="center_vertical"
+                          android:typeface="sans"
+                          android:background="@color/colorLearnMore"
+                />
+        </LinearLayout>
 
-    <com.youth.banner.Banner
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/banner"
-            android:layout_width="match_parent"
-            android:layout_height="130dp" />
-
-</FrameLayout>
+        <LinearLayout
+                android:id="@+id/content1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <LinearLayout android:layout_weight="0.5" android:layout_height="match_parent" android:layout_width="0dp"></LinearLayout>
+                <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/imageView1"
+                        android:src="@drawable/mainaccontent01"
+                        android:scaleType="fitCenter"
+                        app:riv_corner_radius="10dip"
+                        app:riv_border_width="1dip"
+                        app:riv_border_color="#FFFFFF"
+                        app:riv_mutate_background="true"
+                        app:riv_tile_mode="clamp"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="15"
+                />
+                <LinearLayout android:layout_weight="0.5" android:layout_height="match_parent" android:layout_width="0dp"></LinearLayout>
+                <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/imageView2"
+                        android:src="@drawable/mainaccontent02"
+                        android:scaleType="fitCenter"
+                        app:riv_corner_radius="10dip"
+                        app:riv_border_width="1dip"
+                        app:riv_border_color="#FFFFFF"
+                        app:riv_mutate_background="true"
+                        app:riv_tile_mode="clamp"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="15"
+                />
+                <LinearLayout android:layout_weight="0.5" android:layout_height="match_parent" android:layout_width="0dp"></LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/content2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <LinearLayout android:layout_weight="0.5" android:layout_height="match_parent" android:layout_width="0dp"></LinearLayout>
+                <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/imageView3"
+                        android:src="@drawable/mainaccontent03"
+                        android:scaleType="fitCenter"
+                        app:riv_corner_radius="10dip"
+                        app:riv_border_width="1dip"
+                        app:riv_border_color="#FFFFFF"
+                        app:riv_mutate_background="true"
+                        app:riv_tile_mode="clamp"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="15"
+                />
+                <LinearLayout android:layout_weight="0.5" android:layout_height="match_parent" android:layout_width="0dp"></LinearLayout>
+                <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/imageView4"
+                        android:src="@drawable/mainaccontent04"
+                        android:scaleType="fitCenter"
+                        app:riv_corner_radius="10dip"
+                        app:riv_border_width="1dip"
+                        app:riv_border_color="#FFFFFF"
+                        app:riv_mutate_background="true"
+                        app:riv_tile_mode="clamp"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="15"
+                />
+                <LinearLayout android:layout_weight="0.5" android:layout_height="match_parent" android:layout_width="0dp"></LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/content3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <LinearLayout android:layout_weight="0.5" android:layout_height="match_parent" android:layout_width="0dp"></LinearLayout>
+                <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/imageView5"
+                        android:src="@drawable/mainaccontent05"
+                        android:scaleType="fitCenter"
+                        app:riv_corner_radius="10dip"
+                        app:riv_border_width="1dip"
+                        app:riv_border_color="#FFFFFF"
+                        app:riv_mutate_background="true"
+                        app:riv_tile_mode="clamp"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="15"
+                />
+                <LinearLayout android:layout_weight="0.5" android:layout_height="match_parent" android:layout_width="0dp"></LinearLayout>
+                <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/imageView6"
+                        android:src="@drawable/mainaccontent06"
+                        android:scaleType="fitCenter"
+                        app:riv_corner_radius="10dip"
+                        app:riv_border_width="1dip"
+                        app:riv_border_color="#FFFFFF"
+                        app:riv_mutate_background="true"
+                        app:riv_tile_mode="clamp"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="15"
+                />
+                <LinearLayout android:layout_weight="0.5" android:layout_height="match_parent" android:layout_width="0dp"></LinearLayout>
+        </LinearLayout>
+</LinearLayout>
