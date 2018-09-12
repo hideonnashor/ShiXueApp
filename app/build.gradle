@@ -33,17 +33,24 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.5.1'
 }
 dependencies {
-    implementation 'com.github.florent37:materialviewpager:1.2.3'
-    //dependencies
-    implementation 'com.flaviofaria:kenburnsview:1.0.7'
-    implementation 'com.jpardogo.materialtabstrip:library:1.1.0'
-    implementation 'com.github.bumptech.glide:glide:4.0.0'
-}
-dependencies {
     implementation 'com.makeramen:roundedimageview:2.3.0'
 }
 dependencies {
     implementation 'com.jpardogo.materialtabstrip:library:1.1.1'
+}
+dependencies {
+    implementation 'com.yalantis:phoenix:1.2.3'
+}
+dependencies {
+    implementation 'com.etsy.android.grid:library:1.0.5' // see changelog
+}
+dependencies {
+    //1.0.5 当1.1.0出现问题可以回退到1.0.5.1
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'//没有使用特殊Header，可以不加这行
+}
+dependencies {
+    implementation 'com.etsy.android.grid:library:1.0.5' // listview
 }
 
 dependencies {

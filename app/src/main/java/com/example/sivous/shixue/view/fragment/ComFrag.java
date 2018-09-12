@@ -8,17 +8,30 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+import com.etsy.android.grid.StaggeredGridView;
+import com.example.sivous.shixue.Dao.ContentDao;
+import com.example.sivous.shixue.Dao.DaoFactory;
 import com.example.sivous.shixue.R;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
+import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
+
+import java.util.List;
+import java.util.Map;
+
+import static com.example.sivous.shixue.R.*;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Fragment2.OnFragmentInteractionListener} interface
+ * {@link ComFrag.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Fragment2#newInstance} factory method to
+ * Use the {@link ComFrag#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Fragment2 extends Fragment {
+public class ComFrag extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,7 +43,11 @@ public class Fragment2 extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public Fragment2() {
+    private SimpleAdapter simpleAdapter;
+    private ListView listView;
+    private ContentDao contentDao;
+
+    public ComFrag() {
         // Required empty public constructor
     }
 
@@ -40,11 +57,11 @@ public class Fragment2 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Fragment2.
+     * @return A new instance of fragment ComFrag.
      */
     // TODO: Rename and change types and number of parameters
-    public static Fragment2 newInstance(String param1, String param2) {
-        Fragment2 fragment = new Fragment2();
+    public static ComFrag newInstance(String param1, String param2) {
+        ComFrag fragment = new ComFrag();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,8 +81,35 @@ public class Fragment2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fragment2, container, false);
+        // Inflate the RefreshLayout for this fragment
+        View view =  inflater.inflate(layout.fragment_fragment2, container, false);
+        RefreshLayout refreshLayout = (RefreshLayout)view.findViewById(R.id.refreshLayout);
+//        配置
+        refreshLayout.setEnableAutoLoadMore(true);//是否启用列表惯性滑动到底部时自动加载更多
+//        模拟服务器拉取数据
+        refreshLayout.setOnRefreshListener(new OnRefreshListener() {
+            @Override
+            public void onRefresh(RefreshLayout refreshlayout) {
+                refreshlayout.finishRefresh(2000/*,false*/);//传入false表示刷新失败
+            }
+        });
+        refreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
+            @Override
+            public void onLoadMore(RefreshLayout refreshlayout) {
+                refreshlayout.finishLoadMore(2000/*,false*/);//传入false表示加载失败
+            }
+        });
+
+//        sampleadapter,demo实例直接从dao取数据
+        contentDao = DaoFactory.getDaoFactory().getImageDao();
+        simpleAdapter = new SimpleAdapter(getContext(), (List<? extends Map<String, ?>>) contentDao.getTitleDes(),
+                                                layout.com_content,
+                                                new String[]{"title","description"},
+                                                new int[]{id.comContentText,id.comContentDes});
+//       添加到listview
+        StaggeredGridView gridView = (StaggeredGridView) view.findViewById(R.id.grid_view);
+        gridView.setAdapter(simpleAdapter);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

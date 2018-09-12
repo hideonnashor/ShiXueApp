@@ -1,7 +1,7 @@
 package com.example.sivous.shixue.service;
 
 import com.example.sivous.shixue.Dao.DaoFactory;
-import com.example.sivous.shixue.Dao.ImageDao;
+import com.example.sivous.shixue.Dao.ContentDao;
 
 import java.util.*;
 
@@ -11,8 +11,8 @@ public class ImageService {
     List<String> descriptions;
 
     public Map<List<String>,List<String>> getImgAndDes(){
-        ImageDao imageDao = DaoFactory.getDaoFactory().getImageDao();
-        imgAndDes = imageDao.getImgAndDes();
+        ContentDao contentDao = DaoFactory.getDaoFactory().getImageDao();
+        imgAndDes = contentDao.getImgAndDes();
         images = new ArrayList<>();
         descriptions = new ArrayList<>();
         for (Map.Entry entry:imgAndDes.entrySet()){

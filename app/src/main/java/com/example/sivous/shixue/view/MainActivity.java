@@ -8,15 +8,15 @@ import android.os.Bundle;
 import com.astuetz.PagerSlidingTabStrip;
 import com.example.sivous.shixue.R;
 import com.example.sivous.shixue.view.adapter.AdapterFactory;
+import com.example.sivous.shixue.view.fragment.ComFrag;
 import com.example.sivous.shixue.view.fragment.HomeFrag;
-import com.example.sivous.shixue.view.fragment.Fragment2;
 import com.example.sivous.shixue.view.fragment.Fragment3;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements HomeFrag.OnFragmentInteractionListener
-                                                , Fragment2.OnFragmentInteractionListener
+                                                , ComFrag.OnFragmentInteractionListener
                                                 , Fragment3.OnFragmentInteractionListener {
 
     @Override
@@ -26,11 +26,11 @@ public class MainActivity extends AppCompatActivity implements HomeFrag.OnFragme
 
 //          get fragements and generate list
         HomeFrag homeFrag = new HomeFrag();
-        Fragment2 fragment2 = new Fragment2();
+        ComFrag comFrag = new ComFrag();
         Fragment3 fragment3 = new Fragment3();
         List<Fragment> fragmentList = new ArrayList<>();
         fragmentList.add(homeFrag);
-        fragmentList.add(fragment2);
+        fragmentList.add(comFrag);
         fragmentList.add(fragment3);
 //          Initialize the ViewPager and set an adapter
         ViewPager pager = (ViewPager) findViewById(R.id.viewpager);

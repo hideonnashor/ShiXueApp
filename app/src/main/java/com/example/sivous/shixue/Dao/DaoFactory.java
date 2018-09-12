@@ -1,6 +1,6 @@
 package com.example.sivous.shixue.Dao;
 
-import com.example.sivous.shixue.Dao.Impl.ImageDaoImpl;
+import com.example.sivous.shixue.Dao.Impl.ContentDaoImpl;
 
 //普通工厂模式
 public class DaoFactory {
@@ -13,7 +13,7 @@ public class DaoFactory {
         }
         return daoFactory;
     }
-    public ImageDao getImageDao(){
-        return new ImageDaoImpl();
+    public ContentDao getImageDao(){
+        return new ContentDaoImpl();
     }
 }
