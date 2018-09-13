@@ -1,15 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".view.fragment.Fragment3">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              tools:context=".view.fragment.PersonFrag"
+              android:orientation="vertical"
+>
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-            android:id="@+id/PERSONAL"
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="4"
+                  android:gravity="center"
+    >
+        <ImageView android:layout_width="120dp"
+                   android:layout_height="120dp"
+
+                   android:src="@drawable/personfragicon"
+        />
+    </LinearLayout>
+
+    <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"
+                      android:orientation="horizontal">
+            <TextView android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_weight="2"
+                      android:text="@string/phoneTip"
+                      android:gravity="center"
+                      android:textSize="15sp"
+                      android:layout_margin="2dp"/>
+            <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
 
-</FrameLayout>
+                    app:met_baseColor="#FFFFFF"
+            />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"
+                      android:orientation="horizontal">
+            <TextView android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_weight="3"
+                      android:text="@string/checkTip"
+                      android:gravity="center"
+                      android:textSize="15sp"
+                      android:layout_margin="2dp"/>
+            <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+
+                    app:met_baseColor="#FFFFFF"/>
+            <com.dd.processbutton.FlatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/getCheckCode"
+                    android:textColor="#FFFFFF"
+                    android:layout_weight="1"
+                    pb_colorNormal="@android:color/holo_blue_light"
+                    pb_colorPressed="@android:color/holo_blue_dark" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+        <TextView android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="2"/>
+        <com.dd.processbutton.FlatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/signup"
+                android:textColor="#FFFFFF"
+                android:layout_weight="4"
+                pb_colorNormal="@android:color/holo_blue_light"
+                pb_colorPressed="@android:color/holo_blue_dark" />
+        <com.dd.processbutton.FlatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/signin"
+                android:textColor="#FFFFFF"
+                android:layout_weight="4"
+                pb_colorNormal="@color/viewpageTab"
+                pb_colorPressed="@android:color/holo_blue_dark" />
+        <TextView android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="2"/>
+    </LinearLayout>
+
+</LinearLayout>

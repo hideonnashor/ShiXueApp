@@ -10,14 +10,14 @@ import com.example.sivous.shixue.R;
 import com.example.sivous.shixue.view.adapter.AdapterFactory;
 import com.example.sivous.shixue.view.fragment.ComFrag;
 import com.example.sivous.shixue.view.fragment.HomeFrag;
-import com.example.sivous.shixue.view.fragment.Fragment3;
+import com.example.sivous.shixue.view.fragment.PersonFrag;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements HomeFrag.OnFragmentInteractionListener
                                                 , ComFrag.OnFragmentInteractionListener
-                                                , Fragment3.OnFragmentInteractionListener {
+                                                , PersonFrag.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +27,11 @@ public class MainActivity extends AppCompatActivity implements HomeFrag.OnFragme
 //          get fragements and generate list
         HomeFrag homeFrag = new HomeFrag();
         ComFrag comFrag = new ComFrag();
-        Fragment3 fragment3 = new Fragment3();
+        PersonFrag personFrag = new PersonFrag();
         List<Fragment> fragmentList = new ArrayList<>();
         fragmentList.add(homeFrag);
         fragmentList.add(comFrag);
-        fragmentList.add(fragment3);
+        fragmentList.add(personFrag);
 //          Initialize the ViewPager and set an adapter
         ViewPager pager = (ViewPager) findViewById(R.id.viewpager);
         try {
