@@ -82,10 +82,19 @@ public class ComFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the RefreshLayout for this fragment
-        View view =  inflater.inflate(layout.fragment_fragment2, container, false);
+        View view =  inflater.inflate(R.layout.fragment_fragment2, container, false);
         RefreshLayout refreshLayout = (RefreshLayout)view.findViewById(R.id.refreshLayout);
 //        配置
+        refreshLayout.setEnableLoadMore(true);//是否启用上拉加载功
         refreshLayout.setEnableAutoLoadMore(true);//是否启用列表惯性滑动到底部时自动加载更多
+        refreshLayout.setEnableNestedScroll(true);//是否启用嵌套滚动
+        refreshLayout.setDisableContentWhenLoading(true);//是否在加载的时候禁止列表的操作
+        refreshLayout.setEnableScrollContentWhenLoaded(true);//是否在加载完成之后滚动内容显示新数据
+        refreshLayout.setEnableFooterFollowWhenLoadFinished(true);//是否在全部加载结束之后Footer跟随内容
+        refreshLayout.finishLoadMore(1);
+        refreshLayout.autoLoadMore(1);
+        refreshLayout.setFooterMaxDragRate(20);//最大显示下拉高度/Footer标准高度
+
 //        模拟服务器拉取数据
         refreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override

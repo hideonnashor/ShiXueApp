@@ -70,8 +70,8 @@
                     android:text="@string/getCheckCode"
                     android:textColor="#FFFFFF"
                     android:layout_weight="1"
-                    pb_colorNormal="@android:color/holo_blue_light"
-                    pb_colorPressed="@android:color/holo_blue_dark" />
+                    app:pb_colorNormal="@color/perFragButtonOnPress"
+                    app:pb_colorPressed="@color/perFragButton" />
         </LinearLayout>
 
     </LinearLayout>
@@ -89,8 +89,8 @@
                 android:text="@string/signup"
                 android:textColor="#FFFFFF"
                 android:layout_weight="4"
-                pb_colorNormal="@android:color/holo_blue_light"
-                pb_colorPressed="@android:color/holo_blue_dark" />
+                app:pb_colorNormal="@color/perFragButtonOnPress"
+                app:pb_colorPressed="@color/perFragButton" />
         <com.dd.processbutton.FlatButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -98,8 +98,9 @@
                 android:text="@string/signin"
                 android:textColor="#FFFFFF"
                 android:layout_weight="4"
-                pb_colorNormal="@color/viewpageTab"
-                pb_colorPressed="@android:color/holo_blue_dark" />
+                app:pb_colorNormal="@color/perFragButtonOnPress"
+                app:pb_colorPressed="@color/perFragButton"
+                 />
         <TextView android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="2"/>
     </LinearLayout>
 

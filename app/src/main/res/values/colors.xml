@@ -7,4 +7,8 @@
     <color name="colorLearnMore">#32373A</color>
     <color name="viewpageTab">#3F484E</color>
     <color name="viewpageTabBack">#142732</color>
+
+    <!--person fragment-->
+    <color name="perFragButton">#666666</color>
+    <color name="perFragButtonOnPress">#333333</color>
 </resources>

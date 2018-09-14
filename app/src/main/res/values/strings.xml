@@ -6,9 +6,13 @@
     <string name="learnmore">Learn More </string>
 
     <!--person fragment-->
-    <string name="phoneTip">手机：</string>
+    <string name="phoneTip">手机号：</string>
     <string name="checkTip">验证码：</string>
     <string name="getCheckCode">获取验证码</string>
     <string name="signup">注册</string>
     <string name="signin">登陆</string>
+
+    <!--main ac drawer menu-->
+    <string name="drawer_open">打开</string>
+    <string name="drawer_close">关闭</string>
 </resources>

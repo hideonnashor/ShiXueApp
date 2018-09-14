@@ -58,6 +58,9 @@ dependencies {
 dependencies {
     implementation 'com.github.dmytrodanylyk.android-process-button:library:1.0.0'
 }
+dependencies {
+    compile 'com.ikimuhendis:ldrawer:0.1'
+}
 
 dependencies {
     implementation 'com.android.support.constraint:constraint-layout:+'
